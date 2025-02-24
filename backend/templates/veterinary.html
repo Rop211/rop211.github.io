@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veterinary Services</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Veterinary Services</h1>
+        <div class="menu-toggle">&#9776;</div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('mechanization') }}">Farm Mechanization</a></li>
+                <li><a href="{{ url_for('veterinary') }}">Veterinary Services</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="service-details">
+            <h2>Our Veterinary Services</h2>
+            <div class="service-grid">
+                <div class="service-card">
+                    <div class="service-icon">&#128062;</div>
+                    <h3>Animal Health Checkups</h3>
+                    <p>Comprehensive health assessments for all types of livestock.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">&#128137;</div>
+                    <h3>Vaccination Programs</h3>
+                    <p>Customized vaccination schedules for disease prevention.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">&#128657;</div>
+                    <h3>Emergency Care</h3>
+                    <p>24/7 emergency services for critical animal health situations.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">&#127838;</div>
+                    <h3>Nutritional Counseling</h3>
+                    <p>Expert advice on optimal animal nutrition and feeding programs.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">&#128105;&#8205;&#129466;</div>
+                    <h3>Reproductive Health</h3>
+                    <p>Breeding management and reproductive health services.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Farm Mechanization & Veterinary Services</p>
+        <div class="social-links">
+            <a href="https://facebook.com" target="_blank">Facebook</a>
+            <a href="https://twitter.com" target="_blank">Twitter</a>
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+        </div>
+    </footer>
+    <a href="#" class="back-to-top">&#8593;</a>
+
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>

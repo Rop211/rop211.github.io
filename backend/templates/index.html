@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Mechanization & Veterinary Services</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Farm Mechanization & Veterinary Services</h1>
+        <div class="menu-toggle">&#9776;</div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('mechanization') }}">Farm Mechanization</a></li>
+                <li><a href="{{ url_for('veterinary') }}">Veterinary Services</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="search-section">
+            <input type="text" id="searchInput" placeholder="Search services...">
+        </section>
+
+        <section class="featured-services">
+            <h2>Our Featured Services</h2>
+            <div class="service-grid" id="serviceGrid">
+                <div class="service-card" data-service="farm mechanization">
+                    <div class="service-icon">&#128663;</div>
+                    <h3>Farm Mechanization</h3>
+                    <p>Modern equipment and technology to boost your farm's productivity.</p>
+                    <a href="{{ url_for('mechanization') }}" class="btn">Learn More</a>
+                </div>
+                <div class="service-card" data-service="veterinary care">
+                    <div class="service-icon">&#128062;</div>
+                    <h3>Veterinary Care</h3>
+                    <p>Comprehensive animal health services for your livestock.</p>
+                    <a href="{{ url_for('veterinary') }}" class="btn">Learn More</a>
+                </div>
+                <div class="service-card" data-service="consultation">
+                    <div class="service-icon">&#128203;</div>
+                    <h3>Consultation</h3>
+                    <p>Expert advice for farm management and animal care.</p>
+                    <a href="{{ url_for('contact') }}" class="btn">Get Started</a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>About Our Services</h2>
+            <p>We provide comprehensive solutions for farm mechanization and veterinary care to enhance agricultural productivity and animal health.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Farm Mechanization & Veterinary Services</p>
+        <div class="social-links">
+            <a href="https://facebook.com" target="_blank">Facebook</a>
+            <a href="https://twitter.com" target="_blank">Twitter</a>
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+        </div>
+    </footer>
+    <a href="#" class="back-to-top">&#8593;</a>
+
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+
+    <script>
+        // Search functionality
+        const searchInput = document.getElementById('searchInput');
+        const serviceGrid = document.getElementById('serviceGrid');
+        const serviceCards = serviceGrid.getElementsByClassName('service-card');
+
+        searchInput.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+
+            Array.from(serviceCards).forEach(card => {
+                const serviceName = card.getAttribute('data-service').toLowerCase();
+                if (serviceName.includes(searchTerm)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
