@@ -1,11 +1,88 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
+    <link rel="stylesheet" href="backend/static/css/styles.css">
+    <script src="backend/static/js/scripts.js" defer></script>
 </head>
 <body>
-    <h1>Welcome to My Portfolio</h1>
-    <p>More content coming soon!</p>
+    <header>
+        <nav>
+            <button id="menuToggle">☰</button>
+            <ul id="navMenu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="resume.pdf" download>Resume</a></li>
+                <li><button id="darkModeToggle">Dark Mode</button></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="about">
+        <h1>Hi, I'm ROP KIPKEMBOI DENNIS 👋</h1>
+        <p>A passionate UI/UX Designer & Web Developer.</p>
+<img src="images/IMG_20230901_165025_7~2.jpg" alt="Profile Picture" class="profile-img" />
+
+
+
+        <button onclick="location.href='#contact'">Hire Me</button>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="project">
+            <h3>Farm Mechanization Link App</h3>
+            <p>A web app connecting farmers with mechanization services.</p>
+            <a href="https://github.com/Rop211/FarmMechApp">View on GitHub</a>
+        </div>
+        <div class="project">
+            <h3>WebApp</h3>
+            <p>A modern web application with responsive design.</p>
+            <a href="https://rop211.github.io/WebApp">Live Demo</a>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>UI/UX Design (Figma, Adobe XD)</li>
+            <li>Front-end Development (HTML, CSS, JavaScript, React)</li>
+            <li>Back-end Development (Node.js, Django)</li>
+            <li>Database Management (PostgreSQL, MongoDB)</li>
+        </ul>
+    </section>
+
+    <section id="blog">
+        <h2>Blog</h2>
+        <div class="blog-post">
+            <h3>How UI/UX Design Impacts User Engagement</h3>
+            <p>Great design enhances usability. Here’s why...</p>
+            <a href="https://yourblog.com/uiux-article">Read More</a>
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <h2>What People Say</h2>
+        <blockquote>
+            "Rop211's designs are intuitive and engaging. Highly recommended!"
+            <br>– Jane Doe, CEO of Startup Inc.
+        </blockquote>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:denokipkemboi@gmail.com">denokipkemboi@gmail.com</a></p>
+        <p>Phone: 0719501219</p>
+        <p>GitHub: <a href="https://github.com/Rop211">Rop211</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Rop211. All rights reserved.</p>
+    </footer>
 </body>
 </html>
-
